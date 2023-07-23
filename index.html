@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Adversarial Augmentation of Point Clouds for Domain Generalization in 3D Object Detection.">
-  <meta name="keywords" content="3D-VField, CrashD, Adversarial Augmentation, Domain Generalization">
+        content="Robust Monocular Depth Estimation under Challenging Conditions, ICCV 2023">
+  <meta name="keywords" content="depth estimation, challenging conditions, adverse weather, night, rain, snow, fog, self-supervised, monocular, supervised, adverse conditions, depth, ICCV 2023">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>3D-VField: Adversarial Augmentation of Point Clouds for Domain Generalization in 3D Object Detection</title>
+  <title>Robust Monocular Depth Estimation under Challenging Conditions</title>
   
 <!--  &lt;!&ndash; Global site tag (gtag.js) - Google Analytics &ndash;&gt;
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -47,79 +47,70 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">3D-VField: Adversarial Augmentation of Point Clouds for Domain Generalization in 3D Object Detection</h1>
+          <h1 class="title is-1 publication-title">Robust Monocular Depth Estimation under Challenging Conditions</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://www.cs.cit.tum.de/camp/members/external-phd-students/alexander-lehner/">Alexander Lehner</a><sup>*,1,2</sup>,</span>
             <span class="author-block">
               <a href="https://www.cs.cit.tum.de/camp/members/external-phd-students/stefano-gasperini/">Stefano Gasperini</a><sup>*,1,2</sup>,</span>
             <span class="author-block">
-              <a>Alvaro Marcos-Ramiro</a><sup>2</sup>,
+              <a>Nils Morbitzer</a><sup>*,1</sup>,</span>
             </span>
             <span class="author-block">
-              <a>Michael Schmidt</a><sup>2</sup>,
+              <a>HyunJun Jung</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a>Mohammad-Ali Nikouei Mahani</a><sup>2</sup>,
+              <a href="https://www.cs.cit.tum.de/camp/members/cv-nassir-navab/nassir-navab/">Nassir Navab</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.cs.cit.tum.de/camp/members/cv-nassir-navab/nassir-navab/">Nassir Navab</a><sup>1,3</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.cs.cit.tum.de/camp/members/benjamin-busam/">Benjamin Busam</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.cs.cit.tum.de/camp/members/senior-research-scientists/federico-tombari/">Federico Tombari</a><sup>1,4</sup>
+              <a href="https://www.cs.cit.tum.de/camp/members/senior-research-scientists/federico-tombari/">Federico Tombari</a><sup>1,3</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>*</sup> equal contribution,   </span>
             <span class="author-block"><sup>1</sup> Technical University of Munich,   </span>
-            <span class="author-block"><sup>2</sup> BMW Group,   </span>
-            <span class="author-block"><sup>3</sup> Johns Hopkins University,   </span>
-            <span class="author-block"><sup>4</sup> Google</span>
+            <span class="author-block"><sup>2</sup> VisualAIs,   </span>
+            <span class="author-block"><sup>3</sup> Google</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://openaccess.thecvf.com/content/CVPR2022/html/Lehner_3D-VField_Adversarial_Augmentation_of_Point_Clouds_for_Domain_Generalization_in_CVPR_2022_paper.html"
+                <a href="tbd_link"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>CVPR Paper</span>
+                  <span>ICCV Paper</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2112.04764"
+                <a href="tbd_link"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>arXiv...</span>
                 </a>
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=LyugDwqfelQ"
+                <a href="tbd_link"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
-                  <span>Video</span>
+                  <span>Video...</span>
                 </a>
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://crashd-cars.github.io/"
+                <a href="tbd_link"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>CrashD Dataset</span>
+                  <span>Adverse Translations...</span>
                   </a>
                 </span>
             </div>
@@ -214,20 +205,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-           As 3D object detection on point clouds relies on the geometrical relationships between the points,
-            non-standard object shapes can hinder a method's detection capability. However, in safety-critical settings,
-            robustness to out-of-domain and long-tail samples is fundamental to circumvent dangerous issues, such as
-            the misdetection of damaged or rare cars. In this work, we substantially improve the generalization of 3D
-            object detectors to out-of-domain data by deforming point clouds during training. We achieve this with
-            3D-VField: a novel data augmentation method that plausibly deforms objects via vector fields learned in
-            an adversarial fashion. Our approach constrains 3D points to slide along their sensor view rays while
-            neither adding nor removing any of them. The obtained vectors are transferable, sample-independent and
-            preserve shape and occlusions. Despite training only on a standard dataset, such as KITTI, augmenting
-            with our vector fields significantly improves the generalization to differently shaped objects and scenes.
-            Towards this end, we propose and share CrashD: a synthetic dataset of realistic damaged and rare cars,
-            with a variety of crash scenarios. Extensive experiments on KITTI, Waymo, our CrashD and SUN RGB-D show
-            the generalizability of our techniques to out-of-domain data, different models and sensors, namely LiDAR
-            and ToF cameras, for both indoor and outdoor scenes.
+           abstract
           </p>
         </div>
       </div>
@@ -239,8 +217,9 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/LyugDwqfelQ?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          video ?
+          <!--iframe src="https://www.youtube.com/embed/LyugDwqfelQ?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe-->
         </div>
       </div>
     </div>
@@ -389,12 +368,7 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
-@inproceedings{lehner2022_3d-vfield,
-  title={3D-VField: Adversarial Augmentation of Point Clouds for Domain Generalization in 3D Object Detection},
-  author={Lehner, Alexander and Gasperini, Stefano and Marcos-Ramiro, Alvaro and Schmidt, Michael and Mahani, Mohammad-Ali Nikouei and Navab, Nassir and Busam, Benjamin and Tombari, Federico},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={17295--17304},
-  year={2022}
+      tbd
 }
 </code></pre>
   </div>
@@ -411,7 +385,7 @@
       <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>-->
-      <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fcrashd-cars.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+      <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fmd4all.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
