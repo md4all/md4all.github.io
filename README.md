@@ -1,4 +1,4 @@
-# md4all - Robust Monocular Depth Estimation under Challenging Conditions - ICCV 2023
+# md4all - ICCV 2023
 
 This is the repository that contains source code for the [md4all website](https://md4all.github.io).
 
