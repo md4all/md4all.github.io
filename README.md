@@ -4,7 +4,11 @@ This is the repository that contains source code for the [md4all website](https:
 
 If you find md4all useful for your work please cite:
 ```
-@article{tbd
+@inproceedings{gasperini_morbitzer2023md4all,
+  title={Robust Monocular Depth Estimation under Challenging Conditions},
+  author={Gasperini, Stefano and Morbitzer, Nils and Jung, HyunJun and Navab, Nassir and Tombari, Federico},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  year={2023}
 }
 ```
 
