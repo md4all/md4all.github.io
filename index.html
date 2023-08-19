@@ -39,7 +39,7 @@
 <body>
 
 <section class="hero">
-  <div class="hero-body">
+  <div class="hero-body" style="padding-top:6rem">
   <!-- style="background-color: rgb(240,240,240);"-->
     <div class="container is-max-desktop">
       <div class="columns is-centered">
@@ -47,7 +47,7 @@
           <h1 class="title is-1 publication-title">Robust Monocular Depth Estimation under Challenging Conditions</h1>
 
           <div class="is-size-4 publication-authors">
-            <span class="author-block" style="padding-top:1.5rem; padding-bottom:1rem;">ICCV 2023</span>
+            <span class="author-block" style="padding-top:1.5rem; padding-bottom:1rem;"><b>ICCV 2023</b></span>
           </div>
           
           <div class="is-size-5 publication-authors" style="padding-bottom:1rem">
@@ -57,7 +57,7 @@
               <a>Nils Morbitzer</a><sup>*,1</sup></span>
             </span>
             <span class="author-block">
-              <a>HyunJun Jung</a><sup>1</sup>
+              <a href="https://www.cs.cit.tum.de/camp/members/hyunjun-jung/">HyunJun Jung</a><sup>1</sup>
             </span>
             <span class="author-block">
               <a href="https://www.cs.cit.tum.de/camp/members/cv-nassir-navab/nassir-navab/">Nassir Navab</a><sup>1</sup>
@@ -91,7 +91,7 @@
               </span-->
               <span class="link-block">
                 <a href="tbd_link"
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-normal is-rounded is-dark" style="background-color: rgb(255, 214, 0);color: black;">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
@@ -100,7 +100,7 @@
               </span>
               <span class="link-block">
                 <a href="https://github.com/md4all/md4all"
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-normal is-rounded is-dark" style="background-color: darkorange;color: black;">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
@@ -120,7 +120,7 @@
               <!-- Dataset Link. -->
               <span class="link-block">
                 <a href="https://forms.gle/31w2TvtTiVNyPb916"
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-normal is-rounded is-dark" style="background-color: rgb(201, 0, 201);color: black;">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
@@ -136,19 +136,19 @@
   </div>
 </section>
 
-<section class="section" style="padding-top:1rem">
+<section class="section" style="padding-top:1rem;padding-bottom:4rem">
   <div class="container is-max-desktop" style="background-color: rgb(240,240,240);padding-top:4rem;padding-bottom:4rem">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3" style="margin-bottom:0.7rem">Can you see the trees?</h2>
         <div>
-          <p>Hint: zoom in, increase the brightness, and look closely.</p>
+          <p>Hint: increase the brightness and look closely.</p>
         </div>
         <div class="">
           <img src="images/trees.png"></img>
         </div>
         <div>
-          <p>Our model extracts robust features in all conditions, even in the dark.</p>
+          <p>Our monocular model outputs robust depth estimates in all conditions, even in the dark.</p>
         </div>
       </div>
     </div>
@@ -171,7 +171,7 @@
     <!--/ Abstract. -->
     <div class="columns is-centered has-text-justified">
       <div class="column is-four-fifths" style="padding-bottom:3rem">
-        <h2 class="title is-3">Motivation</h2>
+        <h2 class="title is-3" style="margin-bottom:0">Motivation</h2>
         <div class="">
           <img src="images/factors.png"></img>
         </div>
@@ -186,25 +186,49 @@ supervised approaches learn artifacts from the ground truth sensor (LiDAR is sho
     </div>
     <div class="columns is-centered has-text-justified">
       <div class="column is-four-fifths" style="padding-bottom:3rem">
-        <h2 class="title is-3">Method</h2>
+        <h2 class="title is-3" style="margin-bottom:1rem">Method</h2>
+        <div class="" style="margin-bottom:1rem">
+          <img src="images/method.png"></img>
+        </div>
         <p>
-Description coming soon.
+In this paper, we tackle these safety-critical issues with md4all: a simple and effective solution that works reliably under both adverse and ideal conditions, as well as for different types of learning supervision.
+</br></br>
+We achieve this by exploiting the efficacy of existing methods under perfect settings. Therefore, we provide <b>valid training signals independently of what is in the input</b>. First, with image translation, we generate a set of complex samples corresponding to the normal training ones. Then, we train the depth model by guiding its self- or full-supervision by feeding the generated samples and computing the standard losses on the corresponding original images.
+</br></br>
+As shown in the figure above, we take this further by distilling knowledge from a pre-trained baseline model, which infers only in ideal settings while feeding the depth model a mix of ideal and adverse inputs.
+</br></br>
+Our <a href="https://github.com/md4all/md4all">GitHub repository</a> contains the implementation code of the proposed techniques.
         </p>
       </div>
     </div>
     <div class="columns is-centered has-text-justified">
       <div class="column is-four-fifths" style="padding-bottom:3rem">
-        <h2 class="title is-3">Results</h2>
+        <h2 class="title is-3" style="margin-bottom:0">Results</h2>
         <div class="">
           <img src="images/teaser.png"></img>
         </div>
         <p>
-With md4all, we substantially outperform prior solutions delivering robust estimates in a variety of conditions.
+With md4all, we substantially outperform prior solutions delivering robust estimates in various conditions.
 Remarkably, the proposed md4all uses <b>a single monocular model</b> and no specialized branches.
 </br></br>
-The figure above shows predictions in challenging settings of the nuScenes dataset. The self-supervised Monodepth2 is unable to extract valuable features due to darkness and noise (top). The supervised AdaBins learns to mimic the sensor artifacts and predicts holes in the road (bottom). Applied on the same architectures, our md4all improves robustness in all conditions.
+The figure above shows predictions in challenging settings of the nuScenes dataset. The self-supervised Monodepth2 cannot extract valuable features due to darkness and noise (top). The supervised AdaBins learns to mimic the sensor artifacts and predicts holes in the road (bottom). Applied on the same architectures, our md4all improves robustness in both standard and adverse conditions.
 </br></br>
-In our ICCV paper, we demonstrate the <b>effectiveness of md4all in standard and adverse conditions, under both types of supervision</b>, via extensive experiments on two public datasets, namely nuScenes and Oxford RobotCar.
+In our <a href="tbd">ICCV paper</a>, we demonstrate the <b>effectiveness of md4all in standard and adverse conditions, under both types of supervision</b>, via extensive experiments on two public datasets, namely nuScenes and Oxford RobotCar.
+        </p>
+      </div>
+    </div>
+        <div class="columns is-centered has-text-justified">
+      <div class="column is-four-fifths" style="padding-bottom:3rem">
+        <h2 class="title is-3" style="margin-bottom:1rem">Translated Images</h2>
+        <div class="">
+          <img src="images/translations.png"></img>
+        </div>
+        <p>
+The figure above shows examples of the image translations used to train our md4all. Our method acts as data augmentation by feeding the models with a mix of original and translated samples. This enables a single model to recover information across diverse conditions without modifications at inference time.
+</br></br>
+<a href="https://forms.gle/31w2TvtTiVNyPb916">Here</a>, we share open-source all images in adverse conditions generated to correspond to the sunny and cloudy samples of nuScenes and Oxford Robotcar training sets.
+</br></br>
+These images can be used for future robust methods for depth estimation or other tasks.
         </p>
       </div>
     </div>
@@ -241,19 +265,15 @@ In our ICCV paper, we demonstrate the <b>effectiveness of md4all in standard and
 <footer class="footer" style="padding-bottom:3rem">
   <div class="container">
     <div class="columns is-centered">
-      <div class="column is-8">
+      <div class="column is-8 has-text-justified">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            This website was adapted from <a href"https://nerfies.github.io">Nerfies</a> and is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            You can use the <a
+              href="https://github.com/md4all/md4all.github.io">source code of this website</a>, we ask that you link back to this page in the footer. Please also remember to remove the analytics code in the website's header.
           </p>
         </div>
       </div>
