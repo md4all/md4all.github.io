@@ -92,6 +92,7 @@
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2308.09711"
                    class="external-link button is-normal is-rounded is-dark" style="background-color: rgb(255, 214, 0);color: black;">
+                   <!-- rgb(248, 227, 67) -->
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
@@ -101,6 +102,7 @@
               <span class="link-block">
                 <a href="https://github.com/md4all/md4all"
                    class="external-link button is-normal is-rounded is-dark" style="background-color: darkorange;color: black;">
+                   <!--  rgb(239,134,48)-->
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
@@ -208,12 +210,17 @@ Our <a href="https://github.com/md4all/md4all">GitHub repository</a> contains th
           <img src="images/teaser.png"></img>
         </div>
         <p>
-With md4all, we substantially outperform prior solutions delivering robust estimates in various conditions.
+With md4all, we substantially outperform prior solutions, delivering robust estimates in various conditions.
 Remarkably, the proposed md4all uses <b>a single monocular model</b> and no specialized branches.
 </br></br>
 The figure above shows predictions in challenging settings of the nuScenes dataset. The self-supervised Monodepth2 cannot extract valuable features due to darkness and noise (top). The supervised AdaBins learns to mimic the sensor artifacts and predicts holes in the road (bottom). Applied on the same architectures, our md4all improves robustness in both standard and adverse conditions.
-</br></br>
-In our <a href="https://arxiv.org/abs/2308.09711">ICCV paper</a>, we demonstrate the <b>effectiveness of md4all in standard and adverse conditions, under both types of supervision</b>, via extensive experiments on two public datasets, namely nuScenes and Oxford RobotCar.
+		<div class="">
+          <img src="images/plot_nuscenes.png"></img>
+        </div>
+        <div class="">
+          <img src="images/plot_robotcar.png"></img>
+        </div>
+In our <a href="https://arxiv.org/abs/2308.09711">ICCV paper</a>, we demonstrate the <b>effectiveness of md4all in standard and adverse conditions under both types of supervision</b>. Throughout extensive experiments on the nuScenes and Oxford RobotCar datasets, md4all significantly outperforms prior works (plots).
         </p>
       </div>
     </div>
