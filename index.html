@@ -18,19 +18,25 @@
   gtag('config', 'G-PYXS918KCT');
 </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <!--link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet"-->
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+ 
+   <link rel="stylesheet" href="./static/css/fonts.css">
+
+  <!--link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css"-->
+  <!--link rel="stylesheet" href="./static/css/fontawesome.all.min.css"-->
+  <!--link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"-->
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        href="./static/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./static/js/jquery.min.js"></script>
+  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script-->
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
@@ -91,7 +97,7 @@
               </span-->
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2308.09711"
-                   class="external-link button is-normal is-rounded is-dark" style="background-color: rgb(255, 214, 0);color: black;">
+                   class="external-link button is-normal is-rounded is-dark top-button" style="background-color: rgb(255, 214, 0);color: black;">
                    <!-- rgb(248, 227, 67) -->
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -101,7 +107,7 @@
               </span>
               <span class="link-block">
                 <a href="https://github.com/md4all/md4all"
-                   class="external-link button is-normal is-rounded is-dark" style="background-color: darkorange;color: black;">
+                   class="external-link button is-normal is-rounded is-dark top-button" style="background-color: darkorange;color: black;">
                    <!--  rgb(239,134,48)-->
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -122,7 +128,7 @@
               <!-- Dataset Link. -->
               <span class="link-block">
                 <a href="https://forms.gle/31w2TvtTiVNyPb916"
-                   class="external-link button is-normal is-rounded is-dark" style="background-color: rgb(201, 0, 201);color: black;">
+                   class="external-link button is-normal is-rounded is-dark top-button" style="background-color: rgb(201, 0, 201);color: black;">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
@@ -287,6 +293,31 @@ These images can be used for future robust methods for depth estimation or other
     </div>
   </div>
 </footer>
+
+<!-- GDPR Banner -->
+<div id="gdpr-banner">
+    This page is hosted on GitHub Pages. For analytics and security purposes, GitHub may collect some of your data, such as your IP address and user agent. The data may be transferred to servers outside the European Economic Area. This page does not control GitHub's data collection and processing activities. By using this webpage, you consent to any data collection and processing by GitHub under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" style="text-decoration: none; color: rgb(201, 0, 201);" onmouseover="style='text-decoration:underline; color: rgb(255, 214, 0)'" onmouseout="style='text-decoration:none;color: rgb(201, 0, 201)'" target="_blank">their terms and privacy policy</a>. This page uses <a href="https://policies.google.com/technologies/partner-sites" style="text-decoration: none; color: rgb(201, 0, 201);" onmouseover="style='text-decoration:underline; color: rgb(255, 214, 0)'" onmouseout="style='text-decoration:none;color: rgb(201, 0, 201)'" target="_blank">Google Analytics</a> to assess the community's interest in this work.
+    <button id="accept-gdpr">I agree</button>
+  </div>
+  
+<script>
+    // JavaScript to handle the banner
+    document.addEventListener("DOMContentLoaded", function () {
+      const gdprBanner = document.getElementById("gdpr-banner");
+      const acceptButton = document.getElementById("accept-gdpr");
+
+      // Check if the user has already accepted
+      if (localStorage.getItem("gdprAccepted") === "true") {
+        gdprBanner.style.display = "none";
+      }
+
+      // When the user clicks "Accept", hide the banner and set the localStorage item
+      acceptButton.addEventListener("click", function () {
+        gdprBanner.style.display = "none";
+        localStorage.setItem("gdprAccepted", "true");
+      });
+    });
+  </script>
 
 </body>
 </html>
